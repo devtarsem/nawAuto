@@ -1,0 +1,57 @@
+doctype html 
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        link(rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' )
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+    body
+        section.mapAndList.grid.grid-1-col.gap98
+            section.section-order-acceptance-panel.pad48
+                .order-acceptance-container.flex-3.flex-dir.gap16
+                    .driver-container.flex-2.gap16 
+                        p.driver-order-acceptance-name= `${savari[0].driver.name}` 
+                        p.driver-order-acceptance-autoNumber= `${savari[0].driver.autoNumber}`
+                        p.today-date= new Date()
+                    .orders-accepted 
+                        each child in savari
+                            .accepted.grid.grid-2-col.gap08
+                                p.customer-name-accepted= `${child.savari[0].name}` 
+                                p.customer-arrival-accepted= `${child.savari[0].phoneNumber}` 
+                                p.customer-destination-accepted= `${child.savari[0].rollNumber}`
+                                p.customer-fair-accepted 60/-
+                                
+                                .credential.flex-3.gap08.flex-dir
+                                    p.label Arrival place
+                                    p.cross &darr;
+                                    p.customer-arrival-accepted= `${child.userCurrentOrder[0].arrivalPlace}`
+                                .credential.flex-3.gap08.flex-dir  
+                                    p.label Destination place
+                                    p.cross &darr;
+                                    p.customer-arrival-accepted= `${child.userCurrentOrder[0].destinationPlace}` 
+                                .credential.flex-3.gap08.flex-dir
+                                    p.label Number of savari
+                                    p.cross &darr;
+                                    p.customer-arrival-accepted= `${child.userCurrentOrder[0].NumOfPersons}` 
+                                .credential.flex-3.gap08.flex-dir
+                                    button.pickedBtn picked
+                button.GotoStandagain take auto number on stand
+            //- <div id='map' class='map' style='width: 400px; height: 300px;'></div>
+            //-     <script>
+            //-         const map = document.querySelector('.map')
+            //-         alert(map)
+            //-         mapboxgl.accessToken = 'sk.eyJ1IjoiZmFsbGZpbm8iLCJhIjoiY2xlam01ZmRiMGN1NjNxbXpuNmJpd3dnYSJ9.ylG3qjGNZlCG84Q1ujOutQ';
+            //-         var map = new mapboxgl.Map({
+            //-             container: <div id='map' class='map' style='width: 400px; height: 300px;'></div>,
+            //-             style: 'mapbox://styles/mapbox/mapbox-gl-js/v2.8.1/mapbox-gl.css'
+            //-         });
+            //-     </script>
+
+        script(src='/js/listOfStdIoAuto.js')
+        script(src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js') 

@@ -1,0 +1,76 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        //- script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+        nav.booking-nav.flex-2.pad16 
+            img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet hi! tarsem singh 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                img.logo(src='/img/avatar6.png' alt='logo of company') 
+        section.auto-periority-section.pad96 
+            .auto-periority-container.pad96 
+                form.periority-giving-form.grid.grid-1-col.gap16
+                    .credentials.grid.grid-1-col.gap16 
+                        label.label What is your Auto number?
+                        input.periorityNumber.autoNnumberAtperiorityPoint(placeholder='PBSFDTH585' type='text')
+                    .credentials.grid.grid-1-col.gap16 
+                        label.label stand number
+                        input.periorityNumber.periorityNumberAtPoint(placeholder='5...' type='text')
+                        button.perioritySubmission- submit your auto number
+        script(src='/js/autoPeriorityGiving.js') 
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+    footer.footer.pad96 
+        img.logo(src='/img/logo.png' alt='logo')
+        .foot.grid.grid-4-col.gap96 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading policy 
+                a.foot-link(href='#') Terms and conditions
+                a.foot-link(href='#') Returns              
+                a.foot-link(href='#') Refunds              
+                a.foot-link(href='#') cancellation policy  
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading company
+                a.foot-link(href='#') About founders
+                a.foot-link(href='#') carrear              
+                a.foot-link(href='#') workers              
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading social 
+                a.foot-link(href='#') Twitter
+                a.foot-link(href='#') Instagram              
+                a.foot-link(href='#') Facebook
+                a.foot-link(href='#') Feedback 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading Special
+                a.foot-link(href='#') offers
+                a.foot-link(href='#') Register your auto             
+                a.foot-link(href='#') Want work
+        .api-publication.flex-1.gap96.pad24 
+            p.api-label want to use our application Api
+            button.api-doc-btn Use our Api 
+        .copyright-container
+            p.copyright Copyright &copy; claim by TTS all rightd reserved

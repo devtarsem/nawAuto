@@ -1,0 +1,64 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='https://checkout.razorpay.com/v1/checkout.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            img.logo(src='/img/logo.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet Hi! Tarsem singh 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                img.logo(src='/img/avatar6.png' alt='logo of company')
+        //- section.message.pad96
+            //- h1.message-from-ser your order is placed you get all detail soon please referesh the page frequently 
+        section.section-redirect.pad48 
+            .redirect-container.pad96.flex-1.flex-dir.gap16
+                each detail in bookDetail
+                    if bookDetail[0].general === true
+                        p.booked-driver-name.booked-auto-detail= `Driver name :- ${detail.name}`
+                        p.booked-driver-autoNumber.booked-auto-detail= `Auto number:- ${detail.driver.autoNumber}`
+                        p.booked-driver-phone.booked-auto-detail= `Mobile:- ${detail.driver.phoneNumber}`
+                        p.arrival-booked-journey.booked-auto-detail= `Arrival :- ${detail.userCurrentOrder[0].arrivalPlace}` 
+                        p.destination-booked-journey.booked-auto-detail= `Destination :- ${detail.userCurrentOrder[0].destinationPlace}` 
+                button(id='rzp-button1') Pay for comfirmed booking
+                
+        //- section.timer.pad96 
+        //-     .redirect-container-timer.flex-1.gap16.flex-dir
+        //-         if bookDetail
+        //-             p.label your order is processed wait!
+        //-             p.timer-value 300
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        script(src='/js/paymentCheck.js')
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+        script(src='https://checkout.razorpay.com/v1/checkout.js')
+
+
+        

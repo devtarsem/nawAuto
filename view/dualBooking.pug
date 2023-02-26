@@ -1,0 +1,65 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='https://checkout.razorpay.com/v1/checkout.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            a(href='/')
+                img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet= `hi! ${user.name}` 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                a(href='/my-account') 
+                    img.logo(src=`/img/${user.photo}` alt='logo of company')
+        
+        section.section-dual-booking.pad96 
+            h2.dual-booking-heading Dual Booking
+            .dual-booking-container.pad48 
+                form.dual-booking-form.flex-3.flex-dir.gap16
+                    .credentail.flex-3.flex-dir.gap08 
+                        label.label Arrival place
+                        input.input.dualBooking-arrival(type='text' placeholder='instawash...')
+                    .credentail.flex-3.flex-dir.gap08 
+                        label.label Destination place
+                        input.input.dualBooking-destination(type='text' placeholder='Curo mall')
+                    .credentail.flex-3.flex-dir.gap08 
+                        label.label Arrival Time 
+                        input.input.dualBooking-arrivalTime(type='time' placeholder='8:00am')
+                    .credentail.flex-3.flex-dir.gap08 
+                        label.label Back  Time 
+                        input.input.dualBooking-backTime(type='time' placeholder='8:00pm')
+                    .credentail.flex-3.flex-dir.gap08 
+                        label.label Number of persons 
+                        input.input.dualBooking-numOfPerson(type='text' placeholder='5...')
+                    .credentail.flex-3.flex-dir.gap08 
+                        label.label Arrival date  
+                        input.input.dualBooking-date(type='date' placeholder='12/12/2022')
+                    .credentail.flex-3.flex-dir.gap08 
+                        button.dualBookingBtn Book now! 
+        script(src='/js/dualBookingOrderSend.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')

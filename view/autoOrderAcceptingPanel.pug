@@ -1,0 +1,192 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            a(href='/')
+                img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet Hi! Tarsem singh 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='/item-lose-auto') Item found in auto
+
+                a.booing-btns(href='#') Logout 
+                img.logo(src='/img/avatar6.png' alt='logo of company')
+    
+        section.orderAcceptingPanel-section.pad96
+            a.specialAutoPanel(href='/auto-special') My special bookings
+            .orderAcceptingPanel-container.grid.grid-3-col
+                .all-autos.pad16 
+                    each el in list
+                        .auto-driver-number-1.pad16.grid.grid-1-col.gap16 
+                            .about-driver.grid.grid-1-col.gap16 
+                                .upper-about-detail.flex-2
+                                    .img-name-combo.flex-1.gap08 
+                                        img.driver-img(src='/img/kammo.jpeg' alt='auto driver image')
+                                        p.driver-name= `${el.autoDriver[0].name}` 
+                                        p.periority.label= `stand number : ${el.priority}`
+                                    p.auto-periority-number= `${el.autoNumber}`
+                            
+                                .lower-about-detail.flex-2
+                                    .contact-numbers.flex-1.gap16 
+                                        p.num-1= `${el.autoDriver[0].phoneNumber}`
+                                        p.num-2= `${el.autoDriver[0].AltphoneNumber}`
+                                    //- button.goToServiceBtn Go to ride
+                        
+                            //- .accepted-orders.pad16 
+                            //-     h3.accepted-order-heading Accepted Savari's
+                            //-     .savari-1.pad16.grid.grid-1-col.gap08 
+                            //-         .savari-detail-upper.flex-2
+                            //-             .img-name-combo.flex-1.gap08 
+                            //-                 img.driver-img(src='/img/customer.jpeg' alt='auto driver image')
+                            //-                 p.driver-name Tajinder singh
+                            //-         p.savari-roll-number 20112076
+
+                            //-         .savari-detail-lower.grid.grid-1-col.gap16 
+                            //-             .contact-numbers.flex-2.gap16 
+                            //-                 p.num-1 9478181139
+                            //-                 p.num-2 9463955198
+                            //-             .arrival-destination.flex-1.gap16 
+                            //-                 p.savari-arrival Nitj insta wash 
+                            //-                 p.cross-connection &rarr;
+                            //-                 p.savari-destination Nakoder chock
+
+                .all-orders.pad48 
+                    h3.accepted-order-heading.accepted-order-heading--update Available Savari's
+                    .all-orders-display-container.grid.grid-2-col.gap24 
+                        each order in orders
+                            .order-1.flex-3.flex-dir.gap16 
+                                .order-upper-detail.flex-2
+                                    .img-name-combo.flex-2.gap08 
+                                        img.driver-img(src='/img/road.png' alt='auto driver image')
+                                         
+                                        p.customer-name.customerOrderAcceptingBtn= `${order.user.name}`
+                                        //-- error in this process as well
+                                        each savariAccepted in AllSavariaccepted
+                                            if savariAccepted.general===true 
+                                                p.customer-name.customerOrderAcceptingBtn Booked
+                                            
+                                    p.customer-contact= `${order.user.phoneNumber}`
+                                .order-lower-detail.grid.grid-1-col.gap16 
+                                    .user-trip-detail.flex-1.gap08 
+                                        p.savari-arrival= `${order.arrivalPlace}`
+                                        p.cross-connection &rarr;
+                                        p.savari-destination= `${order.destinationPlace}` 
+                                        p.numOfStudents.cross-connection Number of savari:- 
+                                        p.numOfSaavri.cross-connection= `${order.NumOfPersons}`
+                                    //- .accept-order-container
+                                    //-     button.order-accept-btn Accept savari
+
+        
+                    
+        section.savariFromCity-section 
+            h2.from-city-heading Savari in City
+            .savari-from-city-container.pad96.grid.grid-3-col.gap48 
+                each savari in citySavaris
+                    .savariCity.pad16.grid.grid-1-col.gap16 
+                        img.city-customer-img(src='/img/road.png' alt='customer image')
+                        p.name-of-savari-from-city= `${savari.user.name}`
+                        p.name-of-savari-from-city arrival &darr;
+
+                        p.arrival-from-city= `${savari.arrival}` 
+                        p.name-of-savari-from-city destination &darr;
+
+                        p.destination-from-city= `${savari.destination}` 
+                        p.noOfPerson-from-city= `Number of person :- ${savari.NumberOfPerson}` 
+
+                        p.phoneNumber-city= `mobile :- ${savari.user.phoneNumber}`
+                        p.fair-city fair :- 55/-
+                        //- if savariAccepted.preBookCity==true 
+                            button.acceptCitySavariBtn payment pending ...
+                        //- else 
+                        
+                        button.acceptCitySavariBtn Accept now!
+
+            button.goToRideBtn Go to ride
+
+        section.dual-savari-up-down 
+            h2.from-city-heading Dual bookings 
+            .dual-savari-container.pad96.grid.grid-3-col.gap48
+                each order in dualOrder
+                    .savariCity-dual.pad16.grid.grid-1-col.gap16 
+                        img.city-customer-img.centeral(src='/img/road.png' alt='customer image')
+                        p.name-of-savari-from-city-dual.centeral= `${order.user.name}`
+                        p.arrival-from-city-dual.centeral= `arrival place :- ${order.arrival}`
+                        p.destination-from-city-dual.centeral= `destination place :- ${order.destination}`
+                        p.noOfPerson-from-city-dual.centeral= `Number of person :- ${order.NumberOfPerson}`
+                        p.arrivalTime-city-dual.centeral= `arrival time :- ${order.arrivalTime}`
+                        p.BackTime-city-dual.centeral= `back time :- ${order.BackTime}`
+
+                        
+                        p.date-city-dual.centeral= `date :- ${order.arrivalDate}`
+
+                        p.phoneNumber-city-dual.centeral= `Mobile :- ${order.user.phoneNumber}`
+                        p.fair-city-dual.centeral fair :- 55/-
+                        //- if savariAccepted.preBookCity==true 
+                            button.acceptCitySavariBtn payment pending ...
+                        //- else 
+                        
+                        button.acceptCitySavariBtn-dual Accept now!
+
+
+
+
+        script(src='/js/driverAcceptingOrder.js')
+        script(src='/js/dualBookingOrderAccept.js')
+        script(src='/js/prebookingSavariFromCityAccepting.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+
+    footer.footer.pad96 
+        img.logo(src='/img/logo.png' alt='logo')
+        .foot.grid.grid-4-col.gap96 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading policy 
+                a.foot-link(href='#') Terms and conditions
+                a.foot-link(href='#') Returns              
+                a.foot-link(href='#') Refunds              
+                a.foot-link(href='#') cancellation policy  
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading company
+                a.foot-link(href='#') About founders
+                a.foot-link(href='/new-service') carrear              
+                a.foot-link(href='#') workers              
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading social 
+                a.foot-link(href='#') Twitter
+                a.foot-link(href='#') Instagram              
+                a.foot-link(href='#') Facebook
+                a.foot-link(href='/feeback') Feedback 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading Special
+                a.foot-link(href='/new-service') offers
+                a.foot-link(href='#') Register your auto             
+                a.foot-link(href='/new-service') Want work
+        .api-publication.flex-1.gap96.pad24 
+            p.api-label want to use our application Api
+            button.api-doc-btn Use our Api 
+        .copyright-container
+            p.copyright Copyright &copy; claim by TTS all rightd reserved

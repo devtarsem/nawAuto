@@ -1,0 +1,531 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+
+    body.body-overview
+        header.header 
+            if !user
+                nav.top-navigation.flex-2.pad32
+                    .logo 
+                        img.logo.logo--update(src='/img/logo404.png' alt='logo photo')
+                    .nav-links.flex-1.gap16 
+                        a.link(href='#feature') Features
+                        a.link(href='#test') Testimonials
+                        a.link(href='/about-us') About-us
+                        a.link(href='#answer') FAQ
+                        a.link.signOverview(href='/signup') Signup
+                        a.link.loginOverview(href='/login') Login
+                        //- a.link(href='/my-account') My Account
+                        a.link(href='/auto-booking') Book auto now!
+                    .mobile-nav-icon-container.flex-3
+                            ion-icon.icon.icon--nav--mobile(name='menu-outline')
+                            ion-icon.icon.icon--nav--mobile.icon-mobile-nav-close(name='close-outline')
+            else if user
+                nav.top-navigation.flex-2.pad16 
+                    .logo 
+                        img.logo.logo--update(src='/img/logo404.png' alt='logo photo')
+                    .nav-links.flex-1.gap16 
+                        a.link(href='#feature') Features
+                        a.link(href='#test') Testimonials
+                        a.link(href='/about-us') About-us
+                        a.link(href='#answer') FAQ
+                        //-a.link.signOverview(href='/signup') Signup
+                        //-a.link.loginOverview(href='/login') Login
+                        a.link.loginOverview(href='#') Logout
+
+                        //-a.link(href='/my-account') My Account
+                        a.link(href='/auto-booking').booking-btn-header Book auto now!
+                        a(href='/my-account') 
+                            img.logo(src=`/img/${user.photo}` alt='logo of company')
+
+                    .mobile-nav-icon-container.flex-3
+                            ion-icon.icon.icon--nav--mobile(name='menu-outline')
+                            ion-icon.icon.icon--nav--mobile.icon-mobile-nav-close(name='close-outline')
+
+                .mobile-nav-slider-container.flex-3.flex-dir.gap16
+                    a.link(href='#feature') Features
+                    a.link(href='#test') Testimonials
+                    a.link(href='/about-us') About-us
+                    a.link(href='#answer') FAQ
+                    a.link.signOverview(href='/signup') Signup
+                    a.link.loginOverview(href='/login') Login
+                    a.link(href='/auto-panel') Auto panel
+                    a.link(href='/auto-booking') Book auto now!
+
+                
+            .header-component-section.grid.grid-2-col.gap96.pad96 
+                .header-content.flex-3.flex-dir.gap16 
+                    h1.primary-heading Travel problem in nitj gone with TTS
+                    p.des TTS provides you auto service to travel at your door step, it makes you more comfortable , reliable at your journey. by our service your prestigious time is save and it's very easy for you to travel in local areas.
+                    .header-btns.flex-3.gap16 
+                        a.btn-cta.link(href='/auto-booking') Make your first ride
+                        button.btn-nav Know more 
+                    
+                .header-visual.grid.grid-2-col
+                    img.map-photo(src='/img/map1.jpg'  alt='map image' )
+                    img.map-photo(src='/img/map2.jpg'  alt='map image' )
+                    img.map-photo(src='/img/map3.jpg'  alt='map image' )
+                    img.map-photo(src='/img/map4.jpg'  alt='map image' )
+                    
+                
+
+            .advertising-container.pad48 
+                //- p.ad user name must be uniue for our project
+                p.ad &star;  &star; &star; Offers comming soon!!! &star;  &star; &star;
+        section.special-features.pad48 
+            .special-feature-container.flex-1.gap48 
+                a.specialBookingNavBtn(href='/auto-booking') General bookings
+                a.specialBookingNavBtn(href='#special') special bookings 
+                a.specialBookingNavBtn(href='/pre-booking') Pre bookings
+                a.specialBookingNavBtn(href='/dual-booking') Dual bookings
+
+               
+
+
+
+        section.section-feature.pad96#feature 
+            h2.secondary-heading &mdash; FEATURES &mdash;
+            .feature-container.grid.grid-4-col.gap96.pad16 
+                .feature.flex-3.flex-dir
+                    .icon-placing-box.flex-1
+                        ion-icon.icon(name='transgender-outline')
+                    .detail-box.pad16.flex-3.gap16.flex-dir
+                        h3.tertiary-heading Easy pickup
+                        p.feature-des our auto service pick you from your door step, it adds more comfort to you and save your time as well.
+
+                .feature.flex-3.flex-dir
+                    .icon-placing-box.flex-1
+                        ion-icon.icon(name='transgender-outline')
+                    .detail-box.pad16.flex-3.gap16.flex-dir
+                        h3.tertiary-heading Dual bookings
+                        p.feature-des In our service you can book dual booking both for arrival to destination and destination to arrival at one time.
+                
+                .feature.flex-3.flex-dir
+                    .icon-placing-box.flex-1
+                        ion-icon.icon(name='transgender-outline')
+                    .detail-box.pad16.flex-3.gap16.flex-dir
+                        h3.tertiary-heading Pre booking 
+                        p.feature-des By our service you can prebook the auto from city and other places, its remove your auto finding job from city places.
+
+                .feature.flex-3.flex-dir
+                    .icon-placing-box.flex-1
+                        ion-icon.icon(name='transgender-outline')
+                    .detail-box.pad16.flex-3.gap16.flex-dir
+                        h3.tertiary-heading Monthly offers
+                        p.feature-des Monthly offers were released by our service, with that you can travel to your destination place at very cheap price.
+
+        section.section-testimonial#test
+            h2.secondary-heading &mdash; TESTIMONIAL &mdash;
+            .slider-container
+                .testimonial-cover-design.test-1
+                    .testimonial-container.pad96 
+                        .testminial.flex-1.gap96 
+                            .testimonial-left
+                                img.person-img(src='/img/logo.png' alt='customer-img')
+                            .testimonial-right.flex-1.flex-dir.gap16 
+                                p.review Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit odio quia doloribus voluptas sint illum, eius at suscipit, architecto ad ut dolorum nemo minus eum voluptatibus, culpa cupiditate distinctio?
+                                p.name Tarsem singh 
+                                .stars 
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                .testimonial-cover-design.test-2
+                    .testimonial-container.pad96 
+                        .testminial.flex-1.gap96 
+                            .testimonial-left
+                                img.person-img(src='/img/logo404.png' alt='customer-img')
+                            .testimonial-right.flex-1.flex-dir.gap16 
+                                p.review Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit odio quia doloribus voluptas sint illum, eius at suscipit, architecto ad ut dolorum nemo minus eum voluptatibus, culpa cupiditate distinctio?
+                                p.name Tarsem singh 
+                                .stars 
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                .testimonial-cover-design.test-3
+                    .testimonial-container.pad96 
+                        .testminial.flex-1.gap96 
+                            .testimonial-left
+                                img.person-img(src='/img/customer1.jpg' alt='customer-img')
+                            .testimonial-right.flex-1.flex-dir.gap16 
+                                p.review Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit odio quia doloribus voluptas sint illum, eius at suscipit, architecto ad ut dolorum nemo minus eum voluptatibus, culpa cupiditate distinctio?
+                                p.name Tarsem singh 
+                                .stars 
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+                                    ion-icon.icon-star(name='star-outline')
+            .dots.flex-1.gap16
+                ion-icon(name='ellipse').icon-dot.dot-1
+                ion-icon(name='ellipse').icon-dot.dot-2
+                ion-icon(name='ellipse').icon-dot.dot-3
+
+
+        section.section-booking-and-search.pad96#booking 
+            h2.secondary-heading.SUB-HEAD-ADJUSTMENT-IN-LAYOUT &mdash; GET YOUR FIRST RIDE &mdash;
+            .left-search-form
+                form.search-auto.grid.grid-2-col.gap16#special
+                    h2.specialBooking-heading special night booking
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label(fname='text' type='text') Arrival place
+                        input.inp.specialArrival(placeholder='Nitj')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label(fname='text' type='text') Destination
+                        input.inp.destinationSpecial(placeholder='Bus stand')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label(fname='text' type='text') Number of persons
+                        input.inp.NoOfPersonSpecial(placeholder='1,2...')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label(fname='text' type='text') Date
+                        input.inp.dateSpecial(placeholder='12/12/2022' type='date')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label(fname='text' type='text') Time
+                        input.inp.timeSpecial(placeholder='2:00pm' type='time')
+                    //- .credential.flex-3.flex-dir.gap08 
+                    //-     p.available-auto PBse4789654 available
+                    
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label(fname='text') book now!
+                        button.book-autobtn.form-btn.specialBookingBtn Book auto //
+
+
+        section.section-fairlist.pad96
+            h2.secondary-heading &mdash; FAIR LIST &mdash;
+
+            .fairlist-container 
+                table.table 
+                    thead.head 
+                        tr 
+                            th S.no 
+                            th Arrival place
+                            th Destination place
+                            th catagory
+                            th price
+                            th distance
+                            th time
+                    tbody 
+                        tr.tr1 
+                            td 1
+                            td Nitj
+                            td Maqsuda chock
+                            td General
+                            td 20/-
+                            td 5km
+                            td 10min
+                        tr.tr1 
+                            td 2
+                            td Nitj
+                            td dav halt
+                            td General
+                            td 50/-
+                            td 8km
+                            td 20min
+                        tr.tr1 
+                            td 3
+                            td Nitj
+                            td workshop chock
+                            td General
+                            td 20/-
+                            td 11.5km
+                            td 10min
+                        tr.tr1 
+                            td 4
+                            td Nitj
+                            td patel chock
+                            td General
+                            td 20/-
+                            td 12km
+                            td 10min
+                        tr.tr1 
+                            td 5
+                            td Nitj
+                            td jyoti chock
+                            td General
+                            td 20/-
+                            td 13km
+                            td 10min
+                        tr.tr1 
+                            td 6
+                            td Nitj
+                            td bus chock
+                            td General
+                            td 20/-
+                            td 16km
+                            td 30min
+                        tr.tr1 
+                            td 7
+                            td Nitj
+                            td Maqsuda chock
+                            td General
+                            td 20/-
+                            td 2km
+                            td 10min
+                        tr.tr1 
+                            td 8
+                            td Nitj
+                            td kapurthala chock
+                            td General
+                            td 20/-
+                            td 8km
+                            td 10min
+                        tr.tr1 
+                            td 9
+                            td Nitj
+                            td football chock
+                            td General
+                            td 20/-
+                            td 9km
+                            td 10min
+                        tr.tr1 
+                            td 10
+                            td Nitj
+                            td nakodar chock
+                            td General
+                            td 20/-
+                            td 10km
+                            td 10min
+                        tr.tr1 
+                            td 11
+                            td Nitj
+                            td Guru nanak mission chock
+                            td General
+                            td 20/-
+                            td 11km
+                            td 10min
+                        tr.tr1 
+                            td 12
+                            td Nitj
+                            td bmc chock
+                            td General
+                            td 20/-
+                            td 12.5km
+                            td 10min
+                        tr.tr1 
+                            td 13
+                            td Nitj
+                            td Maqsuda chock
+                            td General
+                            td 20/-
+                            td 2km
+                            td 10min
+                        tr.tr1 
+                            td 14
+                            td Nitj
+                            td pathankot chock
+                            td General
+                            td 20/-
+                            td 6km
+                            td 10min
+                        tr.tr1 
+                            td 15
+                            td Nitj
+                            td hoshiyarpur chock
+                            td General
+                            td 20/-
+                            td 7km
+                            td 10min
+                        tr.tr1 
+                            td 16
+                            td Nitj
+                            td kishanpura chock
+                            td General
+                            td 20/-
+                            td 9km
+                            td 10min
+                        tr.tr1 
+                            td 17
+                            td Nitj
+                            td chiggati chock
+                            td General
+                            td 20/-
+                            td 10km
+                            td 10min
+                        tr.tr1 
+                            td 18
+                            td Nitj
+                            td pap chock
+                            td General
+                            td 20/-
+                            td 12.5km
+                            td 10min
+                        tr.tr1 
+                            td 19
+                            td Nitj
+                            td Railway station city
+                            td General
+                            td 20/-
+                            td 15km
+                            td 10min
+                        tr.tr1 
+                            td 20
+                            td Nitj
+                            td Railway station city
+                            td special
+                            td 250/-
+                            td 15km
+                            td 40min
+                        tr.tr1 
+                            td 21
+                            td Nitj
+                            td Bus stand
+                            td special
+                            td 250/-
+                            td 15km
+                            td 40min
+                        tr.tr1 
+                            td 22
+                            td Nitj
+                            td City place
+                            td Dual(6+ persons)
+                            td 55 X 6+
+                            td 15km
+                            td 40min
+                        tr.tr1 
+                            td 23
+                            td Nitj
+                            td wonderLand
+                            td Dual
+                            td 250/-
+                            td 15km
+                            td 40min
+                        tr.tr1 
+                            td 24
+                            td City
+                            td Nitj
+                            td special
+                            td fair anonymous
+                            td 15km
+                            td 40min
+        section.section-answers.pad96#answer
+            h2.secondary-heading.SUB-HEAD-ADJUSTMENT-IN-LAYOUT &mdash; FREQUENTLY ANSKED QUESTIONS &mdash;
+            .answer-container.flex-1.flex-dir.gap48 
+                .search-answers
+                    form.search-ans-form.flex-1
+                        input.inp-answer(placeholder='how to use')
+                        button.searchBtn Search
+                <div class='search-list'>
+                    <ol class='peter'>
+                        <li class='son-of-peter '></li>
+                    </ol>
+                </div>
+                .answer-panel.flex-3.flex-dir.gap16.pad16
+                    .ans.pad24.flex-3.gap08.flex-dir
+                        p.Question How can i use your api?
+                        p.answer Ans:- for using our api you first go to the api section then from there see all routes there is some charges for using api pay the fees you can excess all the api
+            //section.section-chatbot 
+                .bot-container 
+                    .upper-bot-portion.flex-2.pad16 
+                        img.logo(src='/img/logo.png' alt='logo image')
+                        p.chat-bot-name Helping hand
+                    .middle-bot-portion.pad08
+                        .client-reply.flex-3.flex-dir.gap08
+                            p.client-reply-valuei i am tarsem
+                            p.client-reply-valuei i am tarsem
+
+                        .server-reply.flex-3.flex-dir.gap08
+                            p.server-reply-valuei i am server   
+                            p.server-reply-valuei i am server    
+
+                    .bottom-bot-portion-btns.pad08.flex-1.gap08
+                        button.bot-btn booking
+                        button.bot-btn booking
+                        button.bot-btn booking
+
+                    .bottom-texts 
+                        .form-bot.flex-1 
+                            input.bot-inp(placeholder='send...')
+                            button.send-bot-message send//
+        section.chat-section
+            .chat-container.grid.grid-1-col
+                .upper-container.flex-2.gap16 
+                    img(src='/img/logo404.png' class='logo' alt='logo of company')
+                    p.name How can i help you!
+                .middle-container 
+                    .client.flex-3.flex-dir.gap08 
+                        .message.hidden hello client messages
+                    .server.flex-3.flex-dir.gap08 
+                        .message_server.hidden hello client messages
+                .lower-container
+                    form.chat-form.flex-2.flex-dir.gap16 
+                        .sending.flex-1.gap16 
+                            input.input.input-types(placeholder='chat...')
+                            button.send send! 
+                        .extra-functionality.flex-1.gap16
+                            select.mic
+                                option.opt(value='Mic') Mic 
+                                option.opt(value='on') on
+                                option.opt(value='off') off
+                            select.play
+                                option.opt(value='play') play 
+                                option.opt(value='Yes') Yes
+                                option.opt(value='no') no 
+                            select.lang 
+                                option.select(value='select language') Select language
+                                option.select(value='Hindi') Hindi 
+                                option.select(value='English') English
+                                option.select(value='Punjabi') Punjabi 
+                    .default-btns.flex-3.flex-dir.gap08 
+                        .btns.flex-1.gap16 
+                            a(href='/auto-booking').booking.btn Bookings 
+                            button.booking.btn-cta.fair Fare List
+                        .btns.flex-1.gap08 
+                            button.booking.btn-cta.contact Contact List 
+                            button.booking.btn-cta Help/support
+                            button.booking.btn-cta Query
+
+
+
+
+        script(src='/js/specialOrder.js')
+        script(src='/js/chatbotClient.js')
+        script(src='/js/searchBar.js')
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+        script(src='/js/landingPageFrontEffects.js')
+            
+    footer.footer.pad96 
+        img.logo(src='/img/logo404.png' alt='logo')
+        .foot.grid.grid-4-col.gap96 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading policy 
+                a.foot-link(href='/terms-and-conditions') Terms and conditions
+                a.foot-link(href='#') Returns              
+                a.foot-link(href='#') Refunds              
+                a.foot-link(href='#') cancellation policy  
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading company
+                a.foot-link(href='/about-us') About founders
+                a.foot-link(href='/new-service') carrear              
+                a.foot-link(href='#') workers              
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading social 
+                a.foot-link(href='#') Twitter
+                a.foot-link(href='#') Instagram              
+                a.foot-link(href='#') Facebook
+                a.foot-link(href='/feedback') Feedback 
+                a.foot-link(href='/leave-review') Leave review
+
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading Special
+                a.foot-link(href='/new-service') offers
+                a.foot-link(href='/register-auto')#register-auto Register your auto             
+                a.foot-link(href='/new-service') Want work
+        .api-publication.flex-1.gap96.pad24 
+            p.api-label want to use our application Api
+            button.api-doc-btn Use our Api 
+        .copyright-container
+            p.copyright Copyright &copy; claim by TTS all rightd reserved

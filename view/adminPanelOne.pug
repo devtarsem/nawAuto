@@ -1,0 +1,62 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet Hi! Tarsem singh 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                img.logo(src='/img/avatar6.png' alt='logo of company')
+        section.allOrdersOfTheDay.pad96 
+            h2.admin-heading admin panel-all savari's
+            .allOrdersPanel.grid.grid-4-col.gap48
+                each savaris in allsavari 
+                    .order-1-admin.flex-1.gap16.pad16.flex-dir 
+                        p.drivername-admin.admin= `auto driver:- ${savaris.driver.name}` 
+                        p.autoNumber-admin.admin= `auto number:- ${savaris.driver.autoNumber}` 
+                        p.savari-name-admin.admin= `savari name:- ${savaris.savari[0].name}`
+                        p.arrival-admin.admin= `arrival:- ${savaris.userCurrentOrder[0].arrivalPlace}` 
+                        p.destination-admin.admin= `destination:- ${savaris.userCurrentOrder[0].destinationPlace}` 
+                        p.numOfPerson-admin.admin= `number of persons:- ${savaris.userCurrentOrder[0].NumberOfPerson}`
+                        p.fair-admin.admin fair deposit:- 280/-
+        section.allOrdersOfTheDay.pad96 
+            h2.admin-heading admin panel-all special savari's
+            .allOrdersPanel.grid.grid-4-col.gap48
+                each special in specialsavari 
+                    .order-1-admin.flex-1.gap16.pad16.flex-dir 
+                        p.drivername-admin.admin= `auto driver:- ${special.driver[0].name}` 
+                        p.autoNumber-admin.admin= `auto number:- ${special.driver[0].autoNumber}` 
+                        p.savari-name-admin.admin= `savari name:- ${special.user[0].name}`
+                        p.arrival-admin.admin= `arrival:- ${special.order[0].arrivalPlace}` 
+                        p.destination-admin.admin= `destination:- ${special.order[0].destinationPlace}` 
+                        p.numOfPerson-admin.admin= `number of persons:- ${special.order[0].numberOfPerson}`
+                        p.fair-admin.admin fair deposit:- 280/-
+        script(src='/js/adminPanel.js')
+        <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+

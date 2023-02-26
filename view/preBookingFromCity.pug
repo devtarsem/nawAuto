@@ -1,0 +1,68 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            a(href='#')
+                img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet= `hi! ${user.name}` 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                a(href='/my-account') 
+                    img.logo(src=`/img/${user.photo}` alt='logo of company')
+        section.prebookingFromCity-section.pad96 
+            .prebookingFromCity-container.pad96 
+                form.preBooking-form.flex-3.gap16.flex-dir
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label.arrivalPlace Arrival place 
+                        input.prebookingArrivalPlace.input(placeholder='ppr mall')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label.arrivalPlace Destination place 
+                        select.select.prebooking-destination
+                            option.option(value='choose below') choose below 
+                            option.option(value='Main gate') Main gate
+                            option.option(value='Night canteen') Night canteen
+                            option.option(value='Instawash') Instawash
+                            option.option(value='yadav and LT backside') yadav and LT backside
+                            option.option(value='Girls hostel street') Girl's hostel street
+                            option.option(value='Dispensary') Dispensary
+                            option.option(value='Bank and Books shop') Bank and Books shop
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label.arrivalPlace Number of persons 
+                        input.input.prebooking-Num-of-person(placeholder='5...')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label.arrivalPlace Time 
+                        input.input.prebooking-time(placeholder='12.00am' type='time')
+                    .credential.flex-3.flex-dir.gap08 
+                        label.label.arrivalPlace Make your request now 
+                        button.prebooking-bookBtn Book now! 
+
+
+        script(src='/js/preBookingFromCity.js')  
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+

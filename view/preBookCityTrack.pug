@@ -1,0 +1,100 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            a(href='/')
+                img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet= `hi! ${user.name}`
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                a(href='/my-account') 
+                    img.logo(src=`/img/${user.photo}` alt='logo of company')
+
+        section.sectionSpecialAutoTrack.pad96 
+            .special-container 
+                .situation-container.flex-3.gap16.flex-dir
+                    each detail in initialOrder  
+                        .detail-container.flex-1.gap16.pad16 
+                            img(src=`/img/${user.photo}` alt='customer-image').special-img
+                            p.specialName= `${detail.user.name}`
+                            p.specialRollNumber= `${detail.user.rollNumber}`
+                            p.specialArrivalPlace= `${detail.arrival}`
+                            p.crossSpecial &rarr;
+                            p.specialDestinationPlace= `${detail.destination}`
+                            p.statusLable--change= `Number of person :- ${detail.NumberOfPerson}`
+                            p.specialFair 300/-
+                            p.statusLable Status
+                            p.crossSpecial &rarr;
+                            p.statusSpecial.statusSpecial--updated pending...
+                            p &rarr;
+
+
+                            each autoDetail in savariAccept 
+                                if autoDetail.userCurrentOrder[0].arrival === detail.arrival && autoDetail.userCurrentOrder[0].destination === detail.destination
+                                    p.statusSpecial now accepted
+                                
+
+
+                            
+
+
+        section.booking-accept-status.pad96.grid.grid-2-col.gap96 
+            each autoDetail in savariAccept 
+                .status-container.flex-3.flex-dir.gap16.pad16 
+                    h2.detail-heading details 
+                    .credentail.flex-3.gap16 
+                        p.statusLable--change.who-accepted-the-order-text Driver name 
+                        p.drivername-special= `${autoDetail.driver.name}`
+                    .credentail.flex-3.gap16 
+                        p.statusLable--change.who-accepted-the-order-text Auto number
+                        p.driverAutoNumber-special= `${autoDetail.driver.autoNumber}`
+                        //- .credentail.flex-3.gap16 
+                        //-     p.statusLable--change Number of person
+                        //-     p.driverAutoNumber-special= `${status.order[0].numberOfPerson}`  || 'order not accepted yet'
+                    .credentail.flex-3.gap16 
+                        p.statusLable--change.who-accepted-the-order-text Mobile
+                        p.driverPhone= `${autoDetail.driver.phoneNumber}`
+                        p.driverAltNumber= `${autoDetail.driver.AltphoneNumber}`
+                    
+                    .credentail.flex-3.gap16 
+                        p.statusLable--change.who-accepted-the-order-text journey
+                        //-each order in autoDetail.userCurrentOrder
+                            //-each orderPut in initialOrder 
+                                //-if order.arrival === orderPut.arrival
+                        - const index = autoDetail.userCurrentOrder.length-1
+                        p.driverAutoNumber-special= `${autoDetail.userCurrentOrder[index].arrival}`
+                        p.driverAutoNumber-special &rarr;
+                        p.driverAutoNumber-special= `${autoDetail.userCurrentOrder[index].destination}` 
+                        button#rzp-button1.preBookingPaymentBtn Pay for final Booking
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        script(src='/js/preBookingPaymentAccepting.js')
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+        script(src='https://checkout.razorpay.com/v1/checkout.js')

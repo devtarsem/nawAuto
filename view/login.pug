@@ -1,0 +1,85 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        //- script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+        //- nav.booking-nav.flex-2.pad16 
+        //-     a(href='/')
+        //-         img.logo(src='/img/logo404.png' alt='logo of company')
+        //-     .nav-container.flex-1.gap32 
+        //-         p.greet= `hi! ${user.name}`
+        //-         a.booing-btns(href='/') Home
+        //-         a.booing-btns(href='#') Logout 
+        //-         a(href='/my-account') 
+        //-             img.logo(src=`/img/${user.photo}` alt='logo of company')
+
+        section.login-section.pad96 
+            .login-container.pad96.login-error-parent-div
+                form.flex-3.gap16.flex-dir
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label Email 
+                        input.login_input.loginEmail(placeholder='tarsem.io' type='text')
+                    .credential.flex-3.gap08.flex-dir  
+                        label.label Password 
+                        input.login_input.loginPassword(placeholder='********' type='password')
+                    .credential.flex-3.gap08.flex-dir  
+                        button.loginBtn.login_Btn Login!
+                    .credential.flex-3.gap08.flex-dir  
+                        a.forgotPassword(href='/forgot-password') forgot password
+        script(src='/js/login.js')
+
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+        
+    footer.footer.pad96 
+        img.logo(src='/img/logo404.png' alt='logo')
+        .foot.grid.grid-4-col.gap96 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading policy 
+                a.foot-link(href='#') Terms and conditions
+                a.foot-link(href='#') Returns              
+                a.foot-link(href='#') Refunds              
+                a.foot-link(href='#') cancellation policy  
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading company
+                a.foot-link(href='#') About founders
+                a.foot-link(href='#') carrear              
+                a.foot-link(href='#') workers              
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading social 
+                a.foot-link(href='#') Twitter
+                a.foot-link(href='#') Instagram              
+                a.foot-link(href='#') Facebook
+                a.foot-link(href='#') Feedback 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading Special
+                a.foot-link(href='#') offers
+                a.foot-link(href='#') Register your auto             
+                a.foot-link(href='#') Want work
+        .api-publication.flex-1.gap96.pad24 
+            p.api-label want to use our application Api
+            button.api-doc-btn Use our Api 
+        .copyright-container
+            p.copyright Copyright &copy; claim by TTS all rightd reserved

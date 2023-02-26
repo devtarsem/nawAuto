@@ -1,0 +1,55 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='' async defer)
+    
+    body 
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet Hi! Tarsem singh 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                img.logo(src='/img/avatar6.png' alt='logo of company')
+        section.lose-item-auto-side.pad16
+                h1.lose-item-heading Lauguage left in Auto
+                .lose-item-container-auto-side.grid.grid-3-col.gap16
+                    each item in lost
+                        .item-1-left-auto-side.flex-1.fle-dir.gap16 
+                            .driver-details-loss.flex-1.flex-dir.gap08
+                                img(src='/img/customer1.jpg').driver-img-item-left
+                                p.driver-name-item-left.keyword= `Driver Name :- ${item.driver.name}`
+                                p.driver-autoNumber-item-left.keyword= `Driver auto number :- ${item.driver.autoNumber}` 
+                                p.driver-mobile-item-left.keyword= `Mobile :- ${item.driver.phoneNumber}` 
+
+                            .key-nishani-of-item 
+                                .credential.flex-1.flex-dir.gap08
+                                    h2.sub-head-lose-item Items in lauguage
+                                    ol.lose-item-keys.grid.grid-2-col.gap16
+                                        li.keyword.key_1= `${item.key_1}`
+                                        li.keyword.key_2= `${item.key_2}`
+                                        li.keyword.key_3= `${item.key_3}`
+                                        li.keyword.key_4= `${item.key_4}`
+                                        li.keyword.key_5= `${item.key_5}`  

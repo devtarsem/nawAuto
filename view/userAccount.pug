@@ -1,0 +1,192 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+        script(src='' async defer)
+    
+    body.my-account-body
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            a(href='/')
+                img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                p.greet= `hi! ${user.name}` 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='#') Logout 
+                a(href='/my-account')
+                    img.logo(src=`/img/${user.photo}` alt='logo of company')
+
+        //- section.user-account-section.pad96 
+        //-     .user-account-container.pad96.grid.grid-1-col.gap96 
+        //-         .display-details.grid.grid-1-col.gap96 
+        //-             h2.userAccount-heading My Account 
+        //-             .detailsOfUser.grid.grid-2-col
+        //-                 .detail-left.flex-1.flex-dir.gap16 
+        //-                     img.user-account-dp(src='/img/avatar6.png' alt='user photo')
+        //-                     p.user-name-account tarsem singh 
+        //-                 .detail-right.flex-1.flex-dir.gap16 
+        //-                     p.Account-rollno.accTypo 20112079
+        //-                     p.branch-account.accTypo chemical engineering 
+        //-                     p.userphone-no-1-account.accTypo 9478181139
+        //-                     p.userphone-no-1-account.accTypo 9496955198
+                
+        //-         .forgotPassword-and-dp-chnage.grid.grid-1-col.gap96 
+        //-             h2.userAccount-heading Forgot Password
+        //-             form.passwordChange.flex-1
+        //-                 input.input-passwordForgot(placeholder='tarsem@gmail.com')
+        //-                 button.changePasswordBtn Get link on email!
+                            
+        section.my-account-section.pad96 
+            .my-account-container.grid
+                .list-container.flex-1.flex-dir.gap16.pad16
+                    button.info-about-user-btn General
+                    a(href='/auto-booking').my-account-links Book Routine auto
+                    a(href='/#special').my-account-links Book Special
+                    a(href='/pre-booking').my-account-links Book auto for campus
+                    a(href='/dual-booking').my-account-links Book Dual booking 
+
+                    a(href='/redirect').my-account-links My General booking
+                    a(href='/pre-book-status').my-account-links My Pre booking
+                    a(href='/dual-booking-track').my-account-links My Dual booking
+                    a(href='/special').my-account-links My Special booking
+                    a(href='/item-lose-client').my-account-links Item left in auto
+                    
+
+
+                .display-panel
+                    .defined-details.pad16.grid.grid-4-col.gap32
+                        h2.heating-account-inner General Info
+                        p.name-define.define-text= `${user.name}` 
+                        p.branch-define.define-text= `Branch :-${user.branch}` 
+                        p.rollNumber-define.define-text= `Roll Number :- ${user.rollNumber}`
+                        p.mobile-define.define-text= `Mobile :- ${user.phoneNumber}`
+                        p.mobile-define.define-text= `Mobile :- ${user.AltphoneNumber}`
+                        p.email-define.define-text= `email :- ${user.email}`
+                        p.email-define.define-text= `email :- ${user.gender}`
+
+
+                    .change-values-container.pad16.grid.grid-2-col.gap32
+                        h2.heating-account-inner.heating-account-inner--update Make changes
+                        form.name-change.grid.grid-2-col.gap16
+                            .cover-do-noting.flex-3.flex-dir.gap08
+                                label.label Enter new username
+                                input.input.new_name(placeholder='tarsem77' type='text')
+                            button.change-apply-btn.name-chnage-btn save Changes
+                        form.name-change.grid.grid-2-col.gap16
+                            .cover-do-noting.flex-3.flex-dir.gap08
+                                label.label Enter new roll number
+                                input.input.new_rollNumber(placeholder='245698712' type='text')
+                            button.change-apply-btn.rollNumber-chnage-btn save Changes
+                        form.name-change.grid.grid-2-col.gap16
+                            .cover-do-noting.flex-3.flex-dir.gap08
+                                label.label Enter new branch
+                                input.input.new_branch(placeholder='che' type='text')
+                            button.change-apply-btn.branch-chnage-btn save Changes
+                        form.name-change.grid.grid-2-col.gap16
+                            .cover-do-noting.flex-3.flex-dir.gap08
+                                label.label Enter new mobile one
+                                input.input.new_mobile(placeholder='78963-AAAAA' type='text')
+                            button.change-apply-btn.mobile-chnage-btn save Changes
+                        form.name-change.grid.grid-2-col.gap16
+                            .cover-do-noting.flex-3.flex-dir.gap08
+                                label.label Enter new mobile two
+                                input.input.new_mobile-two(placeholder='78963-BBBBB' type='text')
+                            button.change-apply-btn.mobile-two-chnage-btn save Changes
+                        form.name-change.grid.grid-2-col.gap16
+                            .cover-do-noting.flex-3.flex-dir.gap08
+                                label.label Enter Gender 
+                                input.input.new_gender(placeholder='M or F' type='text')
+                            button.change-apply-btn.gender-two-chnage-btn save Changes
+                    .password-changing.grid.grid-2-col.gap16.pad16
+                        h2.heating-account-inner.heating-account-inner--update Make changes
+                        form.forgot-password.flex-1.gap16
+                            input.input(placeholder='Enter your email address' type='text')
+                            button.ForgotPasswordBtn Forgot Password
+                        form.forgot-password.flex-1.gap16
+                            button.updateDpBTn choose avatar
+                    .give-segessition.pad16.grid.grid-2-col.gap16
+                        h2.heating-account-inner.heating-account-inner--update Make changes
+                        a(href='/feedback').suggestionBtn Give some sugesstions! 
+                        a(href='/review').suggestionBtn Leave Review 
+
+
+        section.section-avatars-my-account.pad48
+            ion-icon(name='close-outline').avatar-panel-close-my-account
+            .avatar-container-my-account.grid.grid-5-col.gap16.pad16
+                img(src="/img/man1.png", alt="man avatar").avatars
+                img(src="/img/man2.png", alt="man avatar").avatars
+                img(src="/img/man3.png", alt="man avatar").avatars
+                img(src="/img/man4.png", alt="man avatar").avatars
+                img(src="/img/man5.png", alt="man avatar").avatars
+                img(src="/img/man6.png", alt="man avatar").avatars
+                img(src="/img/man7.png", alt="man avatar").avatars
+                img(src="/img/man8.png", alt="man avatar").avatars
+                img(src="/img/man9.png", alt="man avatar").avatars
+                img(src="/img/man10.png", alt="man avatar").avatars
+                img(src="/img/man11.png", alt="man avatar").avatars
+
+                img(src="/img/lady1.png", alt="female avatar").avatars
+                img(src="/img/lady2.png", alt="female avatar").avatars
+                img(src="/img/lady3.png", alt="female avatar").avatars
+                img(src="/img/lady4.png", alt="female avatar").avatars
+                img(src="/img/lady5.png", alt="female avatar").avatars
+                img(src="/img/lady6.png", alt="female avatar").avatars
+                img(src="/img/lady7.png", alt="female avatar").avatars
+                img(src="/img/lady8.png", alt="female avatar").avatars
+                img(src="/img/lady9.png", alt="female avatar").avatars
+                img(src="/img/lady10.png", alt="female avatar").avatars
+                img(src="/img/lady11.png", alt="female avatar").avatars
+                img(src="/img/lady12.png", alt="female avatar").avatars
+        script(src='/js/myAccount.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+
+    footer.footer.pad96 
+        img.logo(src='/img/logo404.png' alt='logo')
+        .foot.grid.grid-4-col.gap96 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading policy 
+                a.foot-link(href='#') Terms and conditions
+                a.foot-link(href='#') Returns              
+                a.foot-link(href='#') Refunds              
+                a.foot-link(href='#') cancellation policy  
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading company
+                a.foot-link(href='#') About founders
+                a.foot-link(href='#') carrear              
+                a.foot-link(href='#') workers              
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading social 
+                a.foot-link(href='#') Twitter
+                a.foot-link(href='#') Instagram              
+                a.foot-link(href='#') Facebook
+                a.foot-link(href='#') Feedback 
+            .foot-navs.grid.grid-1-col.gap08 
+                h4.fourth-heading Special
+                a.foot-link(href='#') offers
+                a.foot-link(href='#') Register your auto             
+                a.foot-link(href='#') Want work
+        .api-publication.flex-1.gap96.pad24 
+            p.api-label want to use our application Api
+            button.api-doc-btn Use our Api 
+        .copyright-container
+            p.copyright Copyright &copy; claim by TTS all rightd reserved

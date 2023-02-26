@@ -1,0 +1,124 @@
+doctype html 
+html(lang='en')
+    head 
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title NAW &mdash; travel makes easy
+        meta(name='description' content='naw is travel solving website in nitj it solves the problem of travel by providing the online auto booking')
+        link(rel='icon' href='/img/logo.png')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/css/index.css')
+        script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+        script(nomodule src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+    
+    body.signup-body
+        //- header.header 
+        //-     nav.top-navigation.flex-2.pad16 
+        //-         .logo 
+        //-             img.logo(src='/img/logo.png' alt='logo photo')
+        //-         .nav-links.flex-1.gap16 
+        //-             a.link(href='#') Features
+        //-             a.link(href='#') Testimonials
+        //-             a.link(href='#') About-us
+        //-             a.link(href='#') FAQ
+        //-             a.link(href='#') Signup
+        //-             a.link(href='#') Login
+        //-             a.link(href='#') Book auto now!
+
+        nav.booking-nav.flex-2.pad16 
+            img.logo(src='/img/logo404.png' alt='logo of company')
+            .nav-container.flex-1.gap32 
+                a.booing-btns(href='/') Home
+                a.booing-btns(href='/about-us') About us
+
+
+        
+        section.login-section.pad96 
+            .login-container.pad96.sign-up-error-parent 
+                form.flex-3.gap16.flex-dir
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label Name  
+                        input.login_input.name_signup(placeholder='tarsem' type='text' required)
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label Email 
+                        input.login_input.email_signup(placeholder='tarsem.io' type='text')
+                    .credential.flex-3.gap08.flex-dir  
+                        label.label Password 
+                        input.login_input.password_signup(placeholder='********' type='password')
+                    .credential.flex-3.gap08.flex-dir  
+                        label.label Password confirm 
+                        input.login_input.passwordconfirm_signup(placeholder='********' type='password')
+                    .credential.flex-3.gap08.flex-dir  
+                        label.label Gender
+                        select.select.gender_signup 
+                            option.opt(value='choose below') choose below 
+                            option.opt(value='male') male 
+                            option.opt(value='female') female
+                            option.opt(value='other') other
+                    .credential.flex-3.gap08.flex-dir  
+                        label.label Branch  
+                        select.select.branch_signup
+                            option.opt(value='choose below') choose below 
+                            option.opt(value='CSE') CSE  
+                            option.opt(value='IT') IT
+                            option.opt(value='ME') ME 
+                            option.opt(value='TT') TT 
+                            option.opt(value='CHE') CHE 
+                            option.opt(value='CE') CE 
+                            option.opt(value='BT') BT 
+                            option.opt(value='EE') EE 
+                            option.opt(value='ECE') ECE 
+                            option.opt(value='MASTER') MASTER 
+                            option.opt(value='PHD') PHD
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label Roll number (non acadmic person fill NA)
+                        input.login_input.rollNumber_signup(placeholder='201120XX' type='text')
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label Mobile  
+                        input.login_input.mobile1_signup(placeholder='94781XXXXX' type='text')
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label ALt Mobile   
+                        input.login_input.mobile2_signup(placeholder='78376XXXXX' type='text')
+                    .credential.flex-3.gap08.flex-dir 
+                        label.label Choose your avatar  
+                        button.avatarBtn Avatars
+                    .credential.flex-3.gap08.flex-dir  
+                        button.loginBtn.signUp-btn Sign up!
+                    .credential.flex-3.gap08.flex-dir  
+                        a.forgotPassword(href='/forgot-password') forgot password
+        
+
+        section.section-avatars.pad48
+            .avatar-container.grid.grid-5-col.gap16.pad16
+                img(src="/img/man1.png", alt="man avatar").avatars
+                img(src="/img/man2.png", alt="man avatar").avatars
+                img(src="/img/man3.png", alt="man avatar").avatars
+                img(src="/img/man4.png", alt="man avatar").avatars
+                img(src="/img/man5.png", alt="man avatar").avatars
+                img(src="/img/man6.png", alt="man avatar").avatars
+                img(src="/img/man7.png", alt="man avatar").avatars
+                img(src="/img/man8.png", alt="man avatar").avatars
+                img(src="/img/man9.png", alt="man avatar").avatars
+                img(src="/img/man10.png", alt="man avatar").avatars
+                img(src="/img/lady1.png", alt="female avatar").avatars
+                img(src="/img/lady2.png", alt="female avatar").avatars
+                img(src="/img/lady3.png", alt="female avatar").avatars
+                img(src="/img/lady4.png", alt="female avatar").avatars
+                img(src="/img/lady5.png", alt="female avatar").avatars
+                img(src="/img/lady6.png", alt="female avatar").avatars
+                img(src="/img/lady7.png", alt="female avatar").avatars
+                img(src="/img/lady8.png", alt="female avatar").avatars
+                img(src="/img/lady9.png", alt="female avatar").avatars
+                img(src="/img/lady10.png", alt="female avatar").avatars
+                img(src="/img/lady11.png", alt="female avatar").avatars
+                img(src="/img/lady12.png", alt="female avatar").avatars
+
+
+
+
+        script(src='/js/signup.js')
+              
+
+        srcipt(src='/js/signup.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js')
+    
